@@ -30,11 +30,17 @@ export function Footer() {
             wellness — where every stay is thoughtfully composed.
           </p>
           <div className="mt-6 flex gap-3">
-            {[Instagram, Facebook, Linkedin].map((Icon, i) => (
+            {[
+              { Icon: Instagram, href: "https://www.instagram.com/mavros_ai?igsh=bm0wNmJ3MjJjbGEz&utm_source=qr", label: "Instagram" },
+              { Icon: Facebook, href: "#", label: "Facebook" },
+              { Icon: Linkedin, href: "https://www.linkedin.com/company/mavros-tech/", label: "LinkedIn" },
+            ].map(({ Icon, href, label }) => (
               <a
-                key={i}
-                href="#"
-                aria-label="social"
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
                 className="h-10 w-10 grid place-items-center border border-white/20 rounded-full hover:bg-gold hover:border-gold hover:text-ocean transition-colors"
               >
                 <Icon size={16} />
