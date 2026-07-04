@@ -34,25 +34,8 @@ export function Contact() {
                 <p className="font-display text-xl text-ocean">official@mavrostech.in</p>
               </div>
             </a>
-            <div className="flex items-center gap-4">
-              <span className="h-11 w-11 grid place-items-center border border-ocean/20 rounded-full">
-                <MapPin size={16} />
-              </span>
-              <div>
-                <p className="text-[0.65rem] tracking-[0.28em] uppercase text-ink/50">Address</p>
-                <p className="font-display text-xl text-ocean">Bangalore, Karnataka</p>
-              </div>
-            </div>
           </div>
 
-          <div className="mt-10 aspect-[16/9] rounded-sm overflow-hidden border border-ocean/10">
-            <iframe
-              title="Location"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=77.55%2C12.9%2C77.65%2C13.0&layer=mapnik"
-              className="w-full h-full grayscale-[30%]"
-              loading="lazy"
-            />
-          </div>
         </Reveal>
 
         <Reveal delay={0.1}>
