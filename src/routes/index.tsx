@@ -1,24 +1,52 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/luxe/Nav";
+import { Hero } from "@/components/luxe/Hero";
+import { About } from "@/components/luxe/About";
+import { Accommodation } from "@/components/luxe/Accommodation";
+import { Facilities } from "@/components/luxe/Facilities";
+import { Dining } from "@/components/luxe/Dining";
+import { Spa } from "@/components/luxe/Spa";
+import { Experiences } from "@/components/luxe/Experiences";
+import { Gallery } from "@/components/luxe/Gallery";
+import { Testimonials } from "@/components/luxe/Testimonials";
+import { ResortMap } from "@/components/luxe/ResortMap";
+import { FAQ } from "@/components/luxe/FAQ";
+import { Contact } from "@/components/luxe/Contact";
+import { FinalCTA } from "@/components/luxe/FinalCTA";
+import { Footer } from "@/components/luxe/Footer";
+import {
+  ScrollProgress,
+  FloatingButtons,
+  PageLoader,
+} from "@/components/luxe/FloatingUI";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <PageLoader />
+      <ScrollProgress />
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Accommodation />
+        <Facilities />
+        <Dining />
+        <Spa />
+        <Experiences />
+        <Gallery />
+        <Testimonials />
+        <ResortMap />
+        <FAQ />
+        <Contact />
+        <FinalCTA />
+      </main>
+      <Footer />
+      <FloatingButtons />
+    </>
   );
 }
