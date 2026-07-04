@@ -9,7 +9,7 @@ import { Spa } from "@/components/luxe/Spa";
 import { Experiences } from "@/components/luxe/Experiences";
 import { Gallery } from "@/components/luxe/Gallery";
 import { Testimonials } from "@/components/luxe/Testimonials";
-import { ResortMap } from "@/components/luxe/ResortMap";
+
 import { FAQ } from "@/components/luxe/FAQ";
 import { Contact } from "@/components/luxe/Contact";
 import { FinalCTA } from "@/components/luxe/FinalCTA";
@@ -40,7 +40,7 @@ function Index() {
         <Experiences />
         <Gallery />
         <Testimonials />
-        <ResortMap />
+        
         <FAQ />
         <Contact />
         <FinalCTA />
