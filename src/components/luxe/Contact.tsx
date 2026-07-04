@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 export function Contact() {
