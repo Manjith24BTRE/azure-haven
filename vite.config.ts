@@ -13,5 +13,9 @@ export default defineConfig({
     }),
     react(),
   ],
+  preview: {
+    allowedHosts: true,
+  },
 });
+
 
